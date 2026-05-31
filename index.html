@@ -1,55 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css.css">
-    <title>Polska Muzyka</title>
+    <title>Dzieje Polskiej Muzyki</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="skrypt.js" defer></script>
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
 
     <header>
-        <h2>Cudze chwalicie, swego nie znacie</h2>
         <h1>DZIEJE POLSKIEJ MUZYKI</h1>
+        <h2>Cudze chwalicie, swego nie znacie</h2>
     </header>
-
+    
     <nav>
-        <a href="#">Lata 70</a>
-        <a href="#">Lata 80</a>
-        <a href="#">Lata 90</a>
-        <a href="#">Lata 00</a>
-        <a href="#">Idole</a>
-        <a href="#">O mnie</a>
+        <a href="70.html">Lata 70</a>
+        <a href="80.html">Lata 80</a>
+        <a href="90.html">Lata 90</a>
+        <a href="00.html">Lata 00</a>
+        <a href="idole.html">Idole</a>
+        <a href="omnie.html">O mnie</a>
     </nav>
-
+    
     <main>
-        <div class="card">
-            <img src="fotka1.jpg" alt="fotka1">
-            <p>"Polscy Beatelsi"</p>
-        </div>
+        <figure class="card">
+            <img src="fotka1.jpg" alt="Zdjęcie zespołu Czerwone Gitary">
+            <figcaption>"Polscy Beatelsi"</figcaption>
+        </figure>
 
-        <div class="card">
-            <img src="fotka2.jpg" alt="fotka2">
-            <p>K. Cugowski oraz M. Jurecki</p>
-        </div>
+        <figure class="card">
+            <img src="fotka2.jpg" alt="Krzysztof Cugowski i Mieczysław Jurecki">
+            <figcaption>K. Cugowski oraz M. Jurecki</figcaption>
+        </figure>
 
-        <div class="card">
-            <img src="fotka3.jpg" alt="fotka3">
-            <p>Marek Grechuta</p>
-        </div>
+        <figure class="card">
+            <img src="fotka3.jpg" alt="Marek Grechuta">
+            <figcaption>Marek Grechuta</figcaption>
+        </figure>
     </main>
 
-    <section class="text">
-        <p>wawawawa :)</p>
+     <section class="text">
+        <p id="wiwiwi">Oto strona o polskiej muzyce lat ubiegłych :)
+        </p>
+        <p>Dlaczego akurat o polskiej muzyce?</p>
+        <p>Mimo, że nasi rodacy brali wiele inspiracji z zachodu, uważam że polskiej muzyce warto poświęcić uwagę nie mniej jak tej z zachodu, śmię twierdzić że niektóre nasze kawałki były nawet i lepsze!</p>
+        <h4>Oczywiście mówię o tej starszej...</h4>
+        <h1>Zapraszam do lektury! :)</h1>
     </section>
 
+    <section class="text">
+        <p id="cytatKontener">Kliknij :)</p>
+        <button id="losujBtn" onclick="losujCytat()">Losuj</button>
+    </section>
 
     <footer>
-        <p>M 3Ti</p>
+        <p>MŁ 3Ti</p>
     </footer>
 
 </div>
+
 </body>
 </html>

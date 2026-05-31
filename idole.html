@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idole - Dzieje Polskiej Muzyki</title>
+    <style>
+        /* --- DOKŁADNIE TEN SAM STYL RETRO DLA SPÓJNOŚCI --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #121824; 
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 16px 16px;
+            font-family: "Tahoma", "Arial", "Helvetica", sans-serif;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1c2333;
+            border: 4px ridge #475569; 
+            padding: 15px;
+            box-shadow: 10px 10px 0px #0f172a; 
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            border: 3px inset #1d4ed8;
+            padding: 20px 10px;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-family: "Impact", "Arial Black", sans-serif;
+            font-size: 2.5rem;
+            color: #facc15; 
+            text-shadow: 3px 3px 0px #000;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        header h2 {
+            font-size: 1.1rem;
+            color: #67e8f9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            background-color: #0f172a;
+            padding: 8px;
+            border: 2px solid #334155;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            background-color: #334155;
+            padding: 6px 15px;
+            border-top: 2px solid #64748b;
+            border-left: 2px solid #64748b;
+            border-right: 2px solid #1e293b;
+            border-bottom: 2px solid #1e293b;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #facc15;
+            color: #000000;
+            border-top: 2px solid #1e293b;
+            border-left: 2px solid #1e293b;
+            border-right: 2px solid #64748b;
+            border-bottom: 2px solid #64748b;
+        }
+
+        /* --- WYPASIONA SEKCJA IDOLI (ROZBUDOWANE KARTY) --- */
+        .idol-section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .idol-card {
+            background-color: #0f172a;
+            border: 3px outset #475569;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .idol-image-box {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .idol-image-box img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border: 3px inset #334155;
+            background-color: #1e293b;
+            display: block;
+        }
+
+        .idol-content {
+            flex: 2;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .idol-content h3 {
+            color: #facc15;
+            font-size: 1.6rem;
+            border-bottom: 2px dashed #334155;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .idol-content p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        /* Stylizacja odtwarzacza audio */
+        .audio-box {
+            background-color: #1c2333;
+            border: 2px inset #334155;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .audio-box label {
+            font-size: 0.8rem;
+            color: #67e8f9;
+            font-weight: bold;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .audio-box audio {
+            width: 100%;
+            height: 32px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #67e8f9;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: #facc15;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000000;
+            padding: 10px;
+            border-top: 3px double #475569;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>DZIEJE POLSKIEJ MUZYKI</h1>
+        <h2>MOI IDOLE</h2>
+    </header>
+    
+    <nav>
+        <a href="index.html">Strona Główna</a>
+        <a href="70.html">Lata 70</a>
+        <a href="80.html">Lata 80</a>
+        <a href="90.html">Lata 90</a>
+        <a href="00.html">Lata 00</a>
+        <a href="#" class="active">Idole</a>
+        <a href="omnie.html">O mnie</a>
+    </nav>
+    
+    <main class="idol-section">
+
+        <article class="idol-card">
+            <div class="idol-image-box">
+                <img src="radul.jpg" alt="Marek Raduli">
+            </div>
+            <div class="idol-content">
+                <div>
+                    <h3>Marek Raduli</h3>
+                    <p>Mistrz gitary rockowej i jazzowej, grał z takimi zespołami jak Wanda i Banda, Bajm czy Budka Suflera.</p>
+                    <p>Muzyk bardzo wszechstronny, aktualnie działa solowo.</p>
+                </div>
+                <div class="audio-box">
+                    <label>Takie Tango SPODEK 99 - Budka Suflera</label>
+                    <audio controls>
+                    <source src="Budka%20Suflera%20-%20Takie%20tango%20(Spodek%2099)%20%23BudkaSuflera.mp3" type="audio/mpeg">
+                     Twoja przeglądarka nie obsługuje odtwarzacza audio. 
+                    </audio>
+                </div>
+            </div>
+        </article>
+
+        <article class="idol-card">
+            <div class="idol-image-box">
+                <img src="krol.jpg" alt="Jacek Królik">
+            </div>
+            <div class="idol-content">
+                <div>
+                    <h3>Jacek Królik</h3>
+                    <p>Tak jak pan Marek jest mistrzem gitary, to pan Królik technicznie jest mistrzem mistrzów. Grał min. w Brathankach czy Chłopcach z Placu Broni</p>
+                    <p>Aktualnie gra z Krzystofem Cugowskim i zespołem Mistrzów</p>
+                </div>
+                <div class="audio-box">
+                    <label>Kluski Postraszone Oranżadą - JK(Wykonanie - zespoł Mistrzów)</label>
+                    <audio controls>
+                        <source src="kluski.wav" type="audio/mpeg">
+                        Twoja przeglądarka nie obsługuje odtwarzacza audio.
+                    </audio>
+                </div>
+            </div>
+        </article>
+
+        <article class="idol-card">
+            <div class="idol-image-box">
+                <img src="cug.jpg" alt="Cugowski">
+            </div>
+            <div class="idol-content">
+                <div>
+                    <h3>Krzysztof Cugowski</h3>
+                    <p>Tego pana nie trzeba nikomu przedstawiać... Znany przede wszystkim z Budki Suflera, aktualnie występuje z Zespołem Mistrzów. Ciężko mi było wybrać między nim a Krawczykiem w tej mojej osobistej topce, lecz że panowie powyżej są powiązani...</p>
+                </div>
+                <div class="audio-box">
+                    <label>Geniusz Blues w wykonaniu Zespołu Mistrzów</label>
+                    <audio controls>
+                        <source src="wiwiw.wav" type="audio/mpeg">
+                        Twoja przeglądarka nie obsługuje odtwarzacza audio.
+                    </audio>
+                </div>
+            </div>
+        </article>
+
+        <a href="index.html" class="back-link">Powrót do strony głównej</a>
+    </main>
+
+    <footer>
+        <p>MŁ 3Ti</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
