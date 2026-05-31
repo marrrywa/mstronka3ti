@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O mnie - Dzieje Polskiej Muzyki</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #121824; 
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 16px 16px;
+            font-family: "Tahoma", "Arial", "Helvetica", sans-serif;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1c2333;
+            border: 4px ridge #475569; 
+            padding: 15px;
+            box-shadow: 10px 10px 0px #0f172a; 
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            border: 3px inset #1d4ed8;
+            padding: 20px 10px;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-family: "Impact", "Arial Black", sans-serif;
+            font-size: 2.5rem;
+            color: #facc15; 
+            text-shadow: 3px 3px 0px #000;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        header h2 {
+            font-size: 1.1rem;
+            color: #67e8f9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            background-color: #0f172a;
+            padding: 8px;
+            border: 2px solid #334155;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            background-color: #334155;
+            padding: 6px 15px;
+            border-top: 2px solid #64748b;
+            border-left: 2px solid #64748b;
+            border-right: 2px solid #1e293b;
+            border-bottom: 2px solid #1e293b;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #facc15;
+            color: #000000;
+            border-top: 2px solid #1e293b;
+            border-left: 2px solid #1e293b;
+            border-right: 2px solid #64748b;
+            border-bottom: 2px solid #64748b;
+        }
+
+        .content-box {
+            background-color: #0f172a;
+            border: 3px outset #475569;
+            padding: 25px;
+            margin-bottom: 20px;
+            text-align: left; 
+            line-height: 1.6;
+        }
+
+        .content-box h3 {
+            color: #facc15;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px dashed #334155;
+            padding-bottom: 5px;
+        }
+
+        .content-box p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .content-box ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: #38bdf8;
+        }
+
+        /* --- STYLIZACJA ELEMENTÓW QUIZU (DODANA DLA SPÓJNOŚCI) --- */
+        .quiz-form {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #121824;
+            border: 2px inset #334155;
+        }
+
+        .quiz-option {
+            display: block;
+            margin: 10px 0;
+            font-size: 0.95rem;
+            color: #38bdf8;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .quiz-option input {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        #sprawdzBtn {
+            display: inline-block;
+            margin-top: 10px;
+            color: #ffffff;
+            font-family: "Tahoma", sans-serif;
+            font-weight: bold;
+            font-size: 0.85rem;
+            background-color: #334155;
+            padding: 6px 15px;
+            border-top: 2px solid #64748b;
+            border-left: 2px solid #64748b;
+            border-right: 2px solid #1e293b;
+            border-bottom: 2px solid #1e293b;
+            cursor: pointer;
+        }
+
+        #sprawdzBtn:hover {
+            background-color: #facc15;
+            color: #000000;
+            border-top: 2px solid #1e293b;
+            border-left: 2px solid #1e293b;
+            border-right: 2px solid #64748b;
+            border-bottom: 2px solid #64748b;
+        }
+
+        #wynikQuizu {
+            margin: 15px 0;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* -------------------------------------------------------- */
+
+        .back-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #67e8f9;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: #facc15;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000000;
+            padding: 10px;
+            border-top: 3px double #475569;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>DZIEJE POLSKIEJ MUZYKI</h1>
+        <h2>O MNIE</h2>
+    </header>
+    
+    <nav>
+        <a href="index.html">Strona Główna</a>
+        <a href="#">Lata 70</a>
+        <a href="#">Lata 80</a>
+        <a href="#">Lata 90</a>
+        <a href="00.html">Lata 00</a>
+        <a href="idole.html">Idole</a>
+        <a href="#" class="active">O mnie</a>
+    </nav>
+    
+    <main class="content-box">
+        <h3>A więc co nieco o mnie...</h3>
+        <p>Witam! Nazywam się Marysia, jak widać po temacie strony, interesuje mnie muzyka, najbardziej polska. Gram na gitarze (elektrycznej, akustycznej, klasycznej) oraz dla odmiany lubię rysować. Interesuję się również informatyką, widzę siebie w przyszłości w tym zawodzie. </p>
+        <p>Od dziecka chodzę na koncerty, a w wieku 10 lat grałam troszkę na pianinie, lecz jednak bardziej ciągnęło mnie do gitary...</p>
+        <p>Zbieram autografy i zdjęcia z moimi ulubionymi artystami, płyt również trochę mam.</p>
+        
+        <h3>Najlepszy koncert Budki Suflera?</h3>
+        <p></p>
+        
+        <form class="quiz-form" id="quizForm" onsubmit="weryfikujOdpowiedz(event)">
+            <label class="quiz-option">
+                <input type="radio" name="odpowiedz" value="a"> A) Carniege Hall 1999
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="odpowiedz" value="b"> B) Opole 2004
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="odpowiedz" value="c"> C) Spodek 1999
+            <label class="quiz-option">
+                <input type="radio" name="odpowiedz" value="d"> D) Sopot 1994
+            </label>
+            
+            <button type="submit" id="sprawdzBtn">Sprawdź! (ale każdy jest świetny!)</button>
+        </form>
+
+        <p id="wynikQuizu"></p>
+
+        <a href="index.html" class="back-link">Powrót do strony głównej</a>
+    </main>
+
+    <footer>
+        <p>MŁ 3Ti</p>
+    </footer>
+
+</div>
+
+<script>
+    function weryfikujOdpowiedz(event) {
+        event.preventDefault();
+        
+        const formularz = document.getElementById('quizForm');
+        const wybranaWartosc = formularz.odpowiedz.value;
+        const poleWyniku = document.getElementById('wynikQuizu');
+
+        if (!wybranaWartosc) {
+            poleWyniku.style.color = '#facc15'; 
+            poleWyniku.innerText = "zaznaczaj";
+            return;
+        }
+
+
+        if (wybranaWartosc === 'c') {
+            poleWyniku.style.color = '#a7f3d0'; 
+            poleWyniku.innerText = "Dosłownie! To był najlepszy koncert!!!";
+        } else {
+            poleWyniku.style.color = '#ff6b6b'; 
+            poleWyniku.innerText = "Też super koncert, ale nie najlepszy!";
+        }
+    }
+</script>
+</body>
+</html>
